@@ -1,0 +1,3444 @@
+// Datos de Recetas  
+const recetas = [  
+    {  
+        titulo: "Ensalada Mediterránea",  
+        imagen: "imagen/ensalada 11.jpg",  
+        ingredientes: ["Tomate", "Pepino", "Aceitunas", "Queso feta","250 calorias"],  
+        calorias: 250,  
+        preparacion: ["Cortar verduras", "Mezclar ingredientes", "Añadir aderezo"]  
+    },  
+    {  
+        titulo: "Bowl de Quinoa",  
+        imagen: "imagen/ensalada 2.jpg",   
+        ingredientes: ["Quinoa", "Aguacate", "Espinacas", "Pollo a la parrilla","420 calorias"],  
+        calorias: 420,  
+        preparacion: ["Cocinar quinoa", "Grillar pollo", "Cortar verduras", "Mezclar"]  
+    },  
+    {  
+        titulo: "Smoothie Verde",  
+        imagen: "imagen/ensalada 3.jpg",  
+        ingredientes: ["Espinaca", "Plátano", "Leche de almendra", "Chia","180 calorias"],  
+        calorias: 180,  
+        preparacion: ["Licuar ingredientes", "Añadir hielo", "Servir"]  
+    },  
+    {  
+        titulo: "Salmón al Horno",  
+        imagen: "imagen/ensalada 4.jpg",  
+        ingredientes: ["Salmón", "Limón", "Eneldo", "Espárragos","350 calorias"],  
+        calorias: 350,  
+        preparacion: ["Marinar salmón", "Hornear 15 min", "Acompañar con verduras"]  
+    },  
+    {  
+        titulo: "Bowl Proteico",  
+        imagen: "imagen/ensalada 5.jpg",  
+        tiempo: "20 min",   
+        calorias: "400 kcal",  
+        ingredientes: [  
+            "Pechuga de pollo",  
+            "Quinoa",  
+            "Aguacate",  
+            "Espinacas",  
+            "Tomate",
+            "400 calorias"  
+        ],  
+        preparacion: [  
+            "Cocinar la quinoa",  
+            "Grillar el pollo",  
+            "Cortar verduras",  
+            "Montar el bowl"  
+        ]  
+    },  
+    {  
+        titulo: "Wrap de Vegetales",  
+        imagen: "imagen/ensalada 6.jpg",   
+        tiempo: "10 min",  
+        calorias: "300 kcal",   
+        ingredientes: [  
+            "Tortilla integral",  
+            "Lechuga",  
+            "Zanahoria",  
+            "Hummus",  
+            "Pimiento"  
+        ],  
+        preparacion: [  
+            "Cortar verduras en juliana",  
+            "Untar tortilla con hummus",  
+            "Rellenar con vegetales",  
+            "Enrollar el wrap"  
+        ]  
+    },
+    {  
+        titulo: "Curry de Verduras",  
+        imagen: "imagen/ensalada 7.jpg",  
+        tiempo: "30 min",  
+        calorias: "300 kcal",  
+        ingredientes: [  
+            "Leche de coco",  
+            "Curry en polvo",  
+            "Calabacín",  
+            "Zanahoria",  
+            "Cebolla"  
+        ],  
+        preparacion: [  
+            "Cortar verduras",  
+            "Sofreír verduras",  
+            "Añadir leche de coco",  
+            "Cocinar a fuego lento"  
+        ]  
+    },
+    {  
+        "titulo": "Arroz Integral con Verduras",  
+        "imagen": "imagen/ensalada 8.jpeg",  
+        "tiempo": "30 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Arroz integral",  
+            "Pimiento rojo",  
+            "Zanahoria",  
+            "Guisantes",  
+            "Cebolla",  
+            "Aceite de oliva",
+            "300 calorias" 
+        ],  
+        "preparacion": [  
+            "Cocer el arroz integral",  
+            "Saltear las verduras en aceite de oliva",  
+            "Mezclar el arroz con las verduras"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Acai",  
+        "imagen": "imagen/ensalada 9.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Puré de acai",  
+            "Banana",  
+            "Granola",  
+            "Fresas",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Colocar el puré de acai en un bol",  
+            "Cortar la banana y las fresas",  
+            "Añadir las frutas al bol",  
+            "Agregar granola y miel por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Lentejas",  
+        "imagen": "imagen/ensalada 10.jpeg",  
+        "tiempo": "40 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Lentejas",  
+            "Zanahoria",  
+            "Cebolla",  
+            "Tomate",  
+            "Ajo",  
+            "Pimiento verde",  
+            "Caldo de verduras"  
+        ],  
+        "preparacion": [  
+            "Cortar la cebolla, zanahoria, tomate y pimiento",  
+            "Sofreír la cebolla, ajo y pimiento en aceite de oliva",  
+            "Añadir el resto de los ingredientes y el caldo",  
+            "Cocer durante 30-40 minutos hasta que las lentejas estén tiernas"  
+        ]  
+    },
+    {  
+        "titulo": "Tostadas de Aguacate",  
+        "imagen": "imagen/ensalada 12.jpeg",  
+        "tiempo": "10 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Pan integral",  
+            "Aguacate",  
+            "Tomate",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Tostar el pan integral",  
+            "Aplastar el aguacate y sazonar con sal y pimienta",  
+            "Cortar el tomate en rodajas",  
+            "Untar el aguacate sobre las tostadas y colocar las rodajas de tomate"  
+        ]  
+    },
+    {  
+        "titulo": "Pollo al Curry",  
+        "imagen": "imagen/ensalada 13.jpeg",  
+        "tiempo": "35 min",  
+        "calorias": "450 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Leche de coco",  
+            "Pasta de curry",  
+            "Cebolla",  
+            "Ajo",  
+            "Espinacas",  
+            "Arroz basmati"  
+        ],  
+        "preparacion": [  
+            "Cortar el pollo en trozos y dorar en una sartén",  
+            "Sofreír la cebolla y el ajo en aceite",  
+            "Añadir la pasta de curry y la leche de coco",  
+            "Cocer durante 20 minutos y añadir espinacas",  
+            "Servir con arroz basmati"  
+        ]  
+    },
+    {  
+        "titulo": "Pizza de Pollo y Espinacas",  
+        "imagen": "imagen/ensalada 14.jpeg",  
+        "tiempo": "40 min",  
+        "calorias": "500 kcal",  
+        "ingredientes": [  
+            "Base de pizza integral",  
+            "Pechuga de pollo",  
+            "Espinacas",  
+            "Tomate",  
+            "Queso mozzarella",  
+            "Aceite de oliva",  
+            "Ajo"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno",  
+            "Cocinar el pollo y desmenuzarlo",  
+            "Estirar la base de pizza",  
+            "Colocar el pollo, espinacas, tomate y queso sobre la base",  
+            "Hornear durante 15-20 minutos"  
+        ]  
+    },
+    {  
+        "titulo": "Chili con Carne",  
+        "imagen": "imagen/ensalada 15.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "500 kcal",  
+        "ingredientes": [  
+            "Carne molida de res",  
+            "Frijoles rojos",  
+            "Tomate",  
+            "Cebolla",  
+            "Pimiento rojo",  
+            "Ajo",  
+            "Comino",  
+            "Chile en polvo"  
+        ],  
+        "preparacion": [  
+            "Sofreír la carne molida hasta dorarla",  
+            "Agregar cebolla, pimiento rojo, ajo y tomate picados",  
+            "Añadir frijoles, comino, chile en polvo y un poco de agua",  
+            "Cocinar durante 30 minutos, ajustando el condimento"  
+        ]  
+    },
+    {  
+        "titulo": "Huevos Revueltos con Espinacas",  
+        "imagen": "imagen/ensalada 16.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Huevos",  
+            "Espinacas frescas",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Batir los huevos con sal y pimienta",  
+            "Saltear las espinacas en aceite de oliva hasta que se ablanden",  
+            "Verter los huevos batidos sobre las espinacas y revolver hasta que estén cocidos"  
+        ]  
+    },
+    {  
+        "titulo": "Pasta con Salsa Pesto",  
+        "imagen": "imagen/ensalada 17.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pasta integral",  
+            "Albahaca fresca",  
+            "Ajo",  
+            "Piñones",  
+            "Aceite de oliva",  
+            "Parmesano rallado"  
+        ],  
+        "preparacion": [  
+            "Cocer la pasta según las instrucciones del paquete",  
+            "Preparar el pesto triturando albahaca, ajo, piñones, aceite y queso parmesano",  
+            "Mezclar la pasta cocida con la salsa pesto y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Pollo y Quinoa",  
+        "imagen": "imagen/ensalada 18.jpeg",  
+        "tiempo": "30 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Quinoa",  
+            "Pepino",  
+            "Tomate",  
+            "Aguacate",  
+            "Limón",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer la quinoa según las instrucciones",  
+            "Cocinar y desmenuzar la pechuga de pollo",  
+            "Cortar el pepino, tomate y aguacate",  
+            "Mezclar todos los ingredientes con aceite de oliva y limón"  
+        ]  
+    },
+    {  
+        "titulo": "Galletas de Avena",  
+        "imagen": "imagen/ensalada 19.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Avena",  
+            "Harina integral",  
+            "Plátano",  
+            "Mantequilla de almendra",  
+            "Canela",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno a 180°C",  
+            "Mezclar los ingredientes hasta formar una masa",  
+            "Formar pequeñas bolitas y colocarlas en una bandeja para hornear",  
+            "Hornear durante 12-15 minutos"  
+        ]  
+    },
+    {  
+        "titulo": "Salmón al Limón con Verduras Asadas",  
+        "imagen": "imagen/ensalada 20.jpeg",  
+        "tiempo": "30 min",  
+        "calorias": "450 kcal",  
+        "ingredientes": [  
+            "Filetes de salmón",  
+            "Limón",  
+            "Espárragos",  
+            "Zanahorias",  
+            "Aceite de oliva",  
+            "Ajo"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno a 200°C",  
+            "Sazonar el salmón con limón, ajo, sal y pimienta",  
+            "Colocar el salmón y las verduras en una bandeja para hornear",  
+            "Hornear durante 20-25 minutos hasta que el salmón esté cocido"  
+        ]  
+    },
+    {  
+        "titulo": "Tostadas de Hummus y Vegetales",  
+        "imagen": "imagen/ensalada 21.jpeg",  
+        "tiempo": "10 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Pan integral",  
+            "Hummus",  
+            "Pepino",  
+            "Tomate",  
+            "Aceite de oliva",  
+            "Albahaca fresca"  
+        ],  
+        "preparacion": [  
+            "Tostar las rebanadas de pan",  
+            "Untar hummus sobre las tostadas",  
+            "Cortar el pepino y el tomate en rodajas",  
+            "Colocar las verduras sobre el hummus y decorar con albahaca"  
+        ]  
+    },
+    {  
+        "titulo": "Tortilla de Patatas",  
+        "imagen": "images/tortilla-patatas.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Patatas",  
+            "Huevos",  
+            "Cebolla",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Pelar y cortar las patatas en rodajas finas",  
+            "Freír las patatas y cebolla en aceite de oliva hasta que estén tiernas",  
+            "Batir los huevos con sal y pimienta",  
+            "Mezclar las patatas y cebolla con los huevos batidos",  
+            "Cocinar en una sartén a fuego lento hasta que cuaje"  
+        ]  
+    },
+    {  
+        "titulo": "Pollo a la Parrilla con Limón y Hierbas",  
+        "imagen": "images/pollo-parrilla-limon.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pechugas de pollo",  
+            "Limón",  
+            "Ajo",  
+            "Romero",  
+            "Tomillo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Marinar el pollo con limón, ajo, romero, tomillo, aceite de oliva, sal y pimienta",  
+            "Dejar reposar durante 15 minutos",  
+            "Cocinar el pollo en la parrilla hasta que esté dorado y cocido"  
+        ]  
+    },
+    {  
+        "titulo": "Guiso de Lentejas y Verduras",  
+        "imagen": "images/guiso-lentejas.jpg",  
+        "tiempo": "50 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Lentejas",  
+            "Zanahoria",  
+            "Apio",  
+            "Tomate",  
+            "Cebolla",  
+            "Ajo",  
+            "Laurel",  
+            "Caldo de verduras"  
+        ],  
+        "preparacion": [  
+            "Sofreír la cebolla, ajo, zanahoria y apio en aceite de oliva",  
+            "Agregar las lentejas y el tomate picado",  
+            "Añadir el caldo de verduras y hojas de laurel",  
+            "Cocinar durante 30-40 minutos hasta que las lentejas estén tiernas"  
+        ]  
+    },
+    {  
+        "titulo": "Salmón en Papillote con Limón y Albahaca",  
+        "imagen": "images/salmon-papillote.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Filetes de salmón",  
+            "Limón",  
+            "Albahaca",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno a 200°C",  
+            "Colocar el salmón en papel de horno con rodajas de limón y hojas de albahaca",  
+            "Rociar con aceite de oliva y sazonar con sal y pimienta",  
+            "Cerrar el papel de horno y hornear durante 15-20 minutos"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Garbanzos y Atún",  
+        "imagen": "images/ensalada 22.jpeg",  
+        "tiempo": "15 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Garbanzos cocidos",  
+            "Atún enlatado",  
+            "Pimiento rojo",  
+            "Cebolla roja",  
+            "Aceite de oliva",  
+            "Vinagre balsámico",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Escurrir y enjuagar los garbanzos",  
+            "Mezclar los garbanzos con atún, pimiento y cebolla picados",  
+            "Aliñar con aceite de oliva, vinagre, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Açaí con Frutas y Granola",  
+        "imagen": "images/bowl-acai-frutas.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Puré de açaí congelado",  
+            "Plátano",  
+            "Fresas",  
+            "Granola",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Descongelar el puré de açaí",  
+            "Colocar el puré en un bol y añadir las frutas y granola",  
+            "Añadir un poco de miel por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Pasta con Salsa de Tomate y Albahaca",  
+        "imagen": "images/pasta-salsa-tomate.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pasta",  
+            "Tomates frescos",  
+            "Ajo",  
+            "Albahaca",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la pasta según las instrucciones del paquete",  
+            "Sofreír el ajo en aceite de oliva, añadir los tomates picados y cocinar hasta que se ablanden",  
+            "Agregar albahaca fresca, sal y pimienta",  
+            "Mezclar la pasta cocida con la salsa de tomate y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Quinoa y Pollo al Curry",  
+        "imagen": "images/bowl-quinoa-pollo-curry.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pollo",  
+            "Quinoa",  
+            "Leche de coco",  
+            "Curry en polvo",  
+            "Espinacas",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer la quinoa",  
+            "Cocinar el pollo en trozos con curry en polvo",  
+            "Añadir la leche de coco y las espinacas al pollo",  
+            "Servir el pollo al curry sobre la quinoa"  
+        ]  
+    },
+    {  
+        "titulo": "Tacos de Carne Asada",  
+        "imagen": "images/tacos-carne-asada.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "450 kcal",  
+        "ingredientes": [  
+            "Carne asada",  
+            "Tortillas de maíz",  
+            "Cebolla",  
+            "Cilantro",  
+            "Limón",  
+            "Salsa roja"  
+        ],  
+        "preparacion": [  
+            "Cocinar la carne asada a la parrilla",  
+            "Cortar la cebolla y cilantro finamente",  
+            "Colocar la carne en las tortillas, añadir cebolla, cilantro y un poco de salsa",  
+            "Exprimir jugo de limón por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Tomate Casera",  
+        "imagen": "images/sopa-tomate-casera.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "150 kcal",  
+        "ingredientes": [  
+            "Tomates maduros",  
+            "Cebolla",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Caldo de verduras",  
+            "Sal",  
+            "Pimienta",  
+            "Albahaca fresca"  
+        ],  
+        "preparacion": [  
+            "Sofreír la cebolla y ajo en aceite de oliva",  
+            "Agregar los tomates picados y cocinar durante 10 minutos",  
+            "Añadir el caldo de verduras, sal y pimienta, y cocinar 15 minutos más",  
+            "Licuar la sopa hasta obtener una textura suave y decorar con albahaca"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Yogur y Frutas",  
+        "imagen": "images/bowl-yogur-frutas.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Yogur griego",  
+            "Frutas (fresas, plátano, arándanos)",  
+            "Granola",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Colocar el yogur griego en un tazón",  
+            "Agregar las frutas picadas encima",  
+            "Espolvorear con granola y rociar con miel"  
+        ]  
+    },
+    {  
+        "titulo": "Pechuga de Pollo al Ajillo",  
+        "imagen": "images/pechuga-pollo-ajillo.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Perejil fresco",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sazonar la pechuga de pollo con sal y pimienta",  
+            "Sofreír el ajo picado en aceite de oliva hasta dorar",  
+            "Añadir el pollo y cocinar hasta que esté dorado por ambos lados",  
+            "Espolvorear con perejil fresco picado y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Pancakes de Avena y Plátano",  
+        "imagen": "images/pancakes-avena-platano.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Avena",  
+            "Plátano",  
+            "Leche de almendra",  
+            "Polvo de hornear",  
+            "Canela",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Triturar la avena en un procesador de alimentos hasta obtener una harina",  
+            "Mezclar la avena, plátano triturado, leche, polvo de hornear y canela",  
+            "Cocinar los pancakes en una sartén antiadherente con un poco de aceite",  
+            "Servir con miel por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Quinoa y Pollo",  
+        "imagen": "images/ensalada-quinoa-pollo.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pollo",  
+            "Quinoa",  
+            "Pepino",  
+            "Tomate",  
+            "Espinacas",  
+            "Aceite de oliva",  
+            "Vinagre balsámico",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la quinoa según las instrucciones",  
+            "Cocinar el pollo y desmenuzarlo",  
+            "Cortar el pepino, tomate y espinacas",  
+            "Mezclar todos los ingredientes y aliñar con aceite de oliva, vinagre, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Burgers Vegetales de Lentejas",  
+        "imagen": "images/burgers-lentejas.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Lentejas cocidas",  
+            "Cebolla",  
+            "Ajo",  
+            "Zanahoria",  
+            "Pan rallado",  
+            "Comino",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Triturar las lentejas cocidas junto con cebolla, ajo y zanahoria rallada",  
+            "Añadir pan rallado, comino y mezclar hasta obtener una masa",  
+            "Formar las hamburguesas y cocinarlas en una sartén con aceite de oliva",  
+            "Servir en pan de hamburguesa con tus ingredientes favoritos"  
+        ]  
+    },
+    {  
+        "titulo": "Sushi Casero de Salmón y Aguacate",  
+        "imagen": "images/sushi-casero.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Arroz para sushi",  
+            "Salmón fresco",  
+            "Aguacate",  
+            "Alga nori",  
+            "Vinagre de arroz",  
+            "Salsa de soja"  
+        ],  
+        "preparacion": [  
+            "Cocer el arroz para sushi y mezclar con vinagre de arroz",  
+            "Cortar el salmón y el aguacate en tiras finas",  
+            "Extender el arroz sobre el alga nori y colocar el salmón y aguacate en el centro",  
+            "Enrollar y cortar en piezas pequeñas",  
+            "Servir con salsa de soja"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Pollo y Mango",  
+        "imagen": "images/ensalada-pollo-mango.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Mango",  
+            "Lechuga",  
+            "Cebolla morada",  
+            "Aceite de oliva",  
+            "Vinagre balsámico",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocinar el pollo a la parrilla y desmenuzarlo",  
+            "Cortar el mango, la cebolla y la lechuga",  
+            "Mezclar todo y aliñar con aceite de oliva, vinagre, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Calabaza y Zanahoria",  
+        "imagen": "images/sopa-calabaza-zanahoria.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Calabaza",  
+            "Zanahoria",  
+            "Cebolla",  
+            "Ajo",  
+            "Caldo de verduras",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Picar la calabaza, zanahoria, cebolla y ajo",  
+            "Sofreír la cebolla y ajo en aceite de oliva",  
+            "Añadir la calabaza y zanahoria, cubrir con caldo y cocinar por 30 minutos",  
+            "Licuar la mezcla hasta obtener una textura suave",  
+            "Sazonar con sal y pimienta al gusto"  
+        ]  
+    },
+    {  
+        "titulo": "Tostadas de Hummus y Tomate",  
+        "imagen": "images/tostadas-hummus-tomate.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Pan de centeno",  
+            "Hummus",  
+            "Tomate",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta",  
+            "Albahaca fresca"  
+        ],  
+        "preparacion": [  
+            "Tostar el pan de centeno",  
+            "Untar una capa generosa de hummus sobre las tostadas",  
+            "Cortar el tomate en rodajas y colocar sobre el hummus",  
+            "Rociar con aceite de oliva, sazonar con sal y pimienta y decorar con albahaca fresca"  
+        ]  
+    },
+    {  
+        "titulo": "Pizza de Pollo y Pesto",  
+        "imagen": "images/pizza-pollo-pesto.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Base de pizza integral",  
+            "Pechuga de pollo",  
+            "Pesto",  
+            "Tomate",  
+            "Mozzarella",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocinar el pollo y cortarlo en tiras finas",  
+            "Colocar el pesto sobre la base de pizza",  
+            "Agregar el pollo, el tomate en rodajas y la mozzarella",  
+            "Hornear la pizza durante 15-20 minutos hasta que el queso se derrita y la base esté crujiente"  
+        ]  
+    },
+    {  
+        "titulo": "Wrap de Atún y Aguacate",  
+        "imagen": "images/wrap-atun-aguacate.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Lata de atún",  
+            "Tortilla integral",  
+            "Aguacate",  
+            "Lechuga",  
+            "Mayonesa ligera",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Escurrir y desmenuzar el atún",  
+            "Cortar el aguacate en rodajas finas",  
+            "Mezclar el atún con mayonesa, sal, pimienta y unas gotas de limón",  
+            "Colocar sobre la tortilla la mezcla de atún, aguacate y lechuga",  
+            "Enrollar y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Galletas de Avena y Plátano",  
+        "imagen": "images/galletas-avena-platano.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "150 kcal",  
+        "ingredientes": [  
+            "Avena",  
+            "Plátano",  
+            "Manteca de cacahuate",  
+            "Canela",  
+            "Miel",  
+            "Chispas de chocolate (opcional)"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno a 180°C",  
+            "Triturar el plátano y mezclarlo con la avena, la manteca de cacahuate, canela y miel",  
+            "Formar pequeñas bolitas y colocarlas en una bandeja para hornear",  
+            "Hornear durante 10-15 minutos hasta que estén doradas"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Pepino y Yogur",  
+        "imagen": "images/ensalada-pepino-yogur.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "120 kcal",  
+        "ingredientes": [  
+            "Pepino",  
+            "Yogur griego",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Vinagre",  
+            "Sal",  
+            "Pimienta",  
+            "Eneldo fresco"  
+        ],  
+        "preparacion": [  
+            "Pelar y cortar el pepino en rodajas finas",  
+            "Mezclar el yogur griego con ajo picado, aceite de oliva, vinagre, sal y pimienta",  
+            "Agregar el pepino a la mezcla de yogur",  
+            "Revolver bien y decorar con eneldo fresco"  
+        ]  
+    },
+    {  
+        "titulo": "Chili Vegetariano",  
+        "imagen": "images/chili-vegetariano.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Frijoles rojos",  
+            "Pimiento verde",  
+            "Cebolla",  
+            "Ajo",  
+            "Tomate",  
+            "Comino",  
+            "Chile en polvo",  
+            "Caldo de verduras",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Sofreír la cebolla, ajo y pimiento en aceite de oliva",  
+            "Añadir los frijoles, tomate picado, comino y chile en polvo",  
+            "Agregar el caldo de verduras y cocinar por 30 minutos",  
+            "Ajustar el sabor con sal y pimienta y servir caliente"  
+        ]  
+    },
+    {  
+        "titulo": "Frittata de Espárragos y Champiñones",  
+        "imagen": "images/frittata-esparragos-champinones.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Huevos",  
+            "Espárragos",  
+            "Champiñones",  
+            "Cebolla",  
+            "Queso rallado",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sofreír la cebolla, los espárragos y los champiñones en aceite de oliva",  
+            "Batir los huevos con sal y pimienta, luego verter sobre las verduras",  
+            "Espolvorear con queso rallado y cocinar a fuego bajo hasta que esté cuajado",  
+            "Servir caliente"  
+        ]  
+    },
+    {  
+        "titulo": "Salmón a la Mostaza y Miel",  
+        "imagen": "images/salmon-mostaza-miel.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Filetes de salmón",  
+            "Mostaza",  
+            "Miel",  
+            "Aceite de oliva",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Mezclar mostaza, miel, aceite de oliva, limón, sal y pimienta",  
+            "Untar la mezcla sobre los filetes de salmón",  
+            "Hornear el salmón a 200°C durante 15-20 minutos",  
+            "Servir con rodajas de limón"  
+        ]  
+    },
+    {  
+        "titulo": "Tostadas de Pavo y Espinacas",  
+        "imagen": "images/tostadas-pavo-espinacas.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "220 kcal",  
+        "ingredientes": [  
+            "Pan integral",  
+            "Pechuga de pavo",  
+            "Espinacas",  
+            "Queso crema light",  
+            "Tomate",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Tostar el pan integral",  
+            "Untar una capa de queso crema en las tostadas",  
+            "Colocar las espinacas, el tomate y las lonchas de pechuga de pavo",  
+            "Rociar con aceite de oliva y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Garbanzos y Aguacate",  
+        "imagen": "images/ensalada-garbanzos-aguacate.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Garbanzos cocidos",  
+            "Aguacate",  
+            "Tomate",  
+            "Pepino",  
+            "Cebolla morada",  
+            "Aceite de oliva",  
+            "Vinagre balsámico",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Escurrir y enjuagar los garbanzos",  
+            "Cortar el aguacate, tomate, pepino y cebolla morada en trozos pequeños",  
+            "Mezclar todos los ingredientes en un bol",  
+            "Aliñar con aceite de oliva, vinagre balsámico, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Tortilla de Patatas",  
+        "imagen": "images/tortilla-patatas.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Patatas",  
+            "Huevos",  
+            "Cebolla",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Pelar y cortar las patatas en rodajas finas",  
+            "Freír las patatas y la cebolla en aceite de oliva hasta que estén tiernas",  
+            "Batir los huevos con sal y pimienta",  
+            "Añadir las patatas y cebolla al bol con huevos batidos y cuajar la tortilla en una sartén"  
+        ]  
+    },
+    {  
+        "titulo": "Burritos de Pollo y Frijoles Negros",  
+        "imagen": "images/burritos-pollo-frijoles.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Tortillas de harina",  
+            "Frijoles negros cocidos",  
+            "Lechuga",  
+            "Tomate",  
+            "Salsa picante",  
+            "Queso rallado"  
+        ],  
+        "preparacion": [  
+            "Cocinar el pollo y desmenuzarlo",  
+            "Calentar las tortillas en una sartén",  
+            "Colocar el pollo, los frijoles, lechuga, tomate, salsa picante y queso en las tortillas",  
+            "Enrollar los burritos y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Salmón con Ensalada de Quinoa",  
+        "imagen": "images/salmon-ensalada-quinoa.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "450 kcal",  
+        "ingredientes": [  
+            "Filetes de salmón",  
+            "Quinoa",  
+            "Pepino",  
+            "Pimiento rojo",  
+            "Tomate",  
+            "Aceite de oliva",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la quinoa y enfriar",  
+            "Cocinar los filetes de salmón a la parrilla o al horno",  
+            "Cortar el pepino, pimiento y tomate en trozos pequeños",  
+            "Mezclar la quinoa con las verduras y aliñar con aceite de oliva, limón, sal y pimienta",  
+            "Servir el salmón sobre la ensalada de quinoa"  
+        ]  
+    },
+    {  
+        "titulo": "Pasta Integral con Salsa Pesto",  
+        "imagen": "images/pasta-integral-salsa-pesto.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pasta integral",  
+            "Albahaca fresca",  
+            "Ajo",  
+            "Piñones",  
+            "Aceite de oliva",  
+            "Parmesano",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la pasta integral según las instrucciones del paquete",  
+            "Triturar albahaca, ajo, piñones, aceite de oliva y queso parmesano para hacer el pesto",  
+            "Mezclar la pasta cocida con la salsa pesto",  
+            "Servir caliente con un poco de parmesano rallado por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Acai",  
+        "imagen": "images/bowl-acai.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Purée de acai",  
+            "Plátano",  
+            "Fresas",  
+            "Granola",  
+            "Miel",  
+            "Leche de almendra"  
+        ],  
+        "preparacion": [  
+            "Colocar el purée de acai en un tazón",  
+            "Añadir las frutas cortadas, granola y rociar con miel",  
+            "Servir con un poco de leche de almendra"  
+        ]  
+    },
+    {  
+        "titulo": "Tacos de Carne Asada",  
+        "imagen": "images/tacos-carne-asada.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "450 kcal",  
+        "ingredientes": [  
+            "Carne de res para asar",  
+            "Tortillas de maíz",  
+            "Cebolla",  
+            "Cilantro",  
+            "Limón",  
+            "Salsa de tomate",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocinar la carne de res a la parrilla o al sartén",  
+            "Cortar la cebolla y cilantro finamente",  
+            "Calentar las tortillas de maíz",  
+            "Servir la carne sobre las tortillas y agregar cebolla, cilantro y un toque de salsa de tomate"  
+        ]  
+    },
+    {  
+        "titulo": "Tostadas de Pollo y Guacamole",  
+        "imagen": "images/tostadas-pollo-guacamole.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Tortillas de maíz",  
+            "Aguacate",  
+            "Tomate",  
+            "Cebolla",  
+            "Cilantro",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocinar el pollo a la parrilla y desmenuzarlo",  
+            "Cortar el aguacate, tomate, cebolla y cilantro, y mezclar con limón, sal y pimienta para hacer el guacamole",  
+            "Freír las tortillas de maíz para hacer las tostadas",  
+            "Montar las tostadas con el pollo y guacamole por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Croquetas de Pollo y Espinaca",  
+        "imagen": "images/croquetas-pollo-espinaca.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Espinacas",  
+            "Pan rallado",  
+            "Huevo",  
+            "Queso rallado",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer el pollo y desmenuzarlo",  
+            "Sofreír las espinacas hasta que estén tiernas",  
+            "Mezclar el pollo, espinacas, pan rallado, huevo y queso",  
+            "Formar pequeñas croquetas y freírlas en aceite de oliva hasta que estén doradas"  
+        ]  
+    },
+    {  
+        "titulo": "Sándwich de Pavo y Manzana",  
+        "imagen": "images/sandwich-pavo-manzana.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Pan integral",  
+            "Pechuga de pavo",  
+            "Manzana",  
+            "Lechuga",  
+            "Queso suizo",  
+            "Mostaza",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Tostar el pan integral",  
+            "Colocar las lonchas de pavo, manzana en rodajas, queso y lechuga sobre una de las rebanadas",  
+            "Untar mostaza en la otra rebanada de pan y cerrar el sándwich"  
+        ]  
+    },
+    {  
+        "titulo": "Salmón al Horno con Limón y Ajo",  
+        "imagen": "images/salmon-al-horno-limon-ajo.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Filetes de salmón",  
+            "Limón",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno a 180°C",  
+            "Colocar los filetes de salmón en una bandeja para hornear",  
+            "Exprimir el jugo de limón sobre el salmón, y añadir ajo picado, aceite de oliva, sal y pimienta",  
+            "Hornear durante 15-20 minutos hasta que el salmón esté cocido"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Pollo al Curry",  
+        "imagen": "images/ensalada-pollo-curry.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Yogur griego",  
+            "Curry en polvo",  
+            "Manzana",  
+            "Pasas",  
+            "Lechuga",  
+            "Aceite de oliva",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer y desmenuzar el pollo",  
+            "Mezclar el pollo con yogur, curry, limón, sal y pimienta",  
+            "Añadir manzana picada, pasas y lechuga",  
+            "Aliñar con aceite de oliva y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Pizza de Vegetales Asados",  
+        "imagen": "images/pizza-vegetales-asados.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Base de pizza integral",  
+            "Pimiento rojo",  
+            "Berenjena",  
+            "Calabacín",  
+            "Tomate",  
+            "Mozzarella",  
+            "Aceite de oliva",  
+            "Albahaca"  
+        ],  
+        "preparacion": [  
+            "Asar los vegetales (pimiento, berenjena, calabacín) con un poco de aceite de oliva",  
+            "Extender la base de pizza y cubrir con los vegetales asados",  
+            "Añadir rodajas de tomate y mozzarella",  
+            "Hornear a 200°C durante 15-20 minutos",  
+            "Servir con hojas de albahaca fresca"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Arroz Integral con Verduras",  
+        "imagen": "images/bowl-arroz-integral-verduras.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Arroz integral",  
+            "Zanahoria",  
+            "Brócoli",  
+            "Aguacate",  
+            "Semillas de sésamo",  
+            "Salsa de soja",  
+            "Aceite de sésamo"  
+        ],  
+        "preparacion": [  
+            "Cocer el arroz integral según las instrucciones del paquete",  
+            "Cortar la zanahoria y el brócoli en trozos pequeños y cocinarlos al vapor",  
+            "Colocar el arroz en un bowl y añadir las verduras cocidas",  
+            "Agregar rodajas de aguacate, semillas de sésamo y un toque de salsa de soja y aceite de sésamo"  
+        ]  
+    },
+    {  
+        "titulo": "Wrap de Hummus y Vegetales",  
+        "imagen": "images/wrap-hummus-vegetales.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "280 kcal",  
+        "ingredientes": [  
+            "Tortillas integrales",  
+            "Hummus",  
+            "Pepino",  
+            "Tomate",  
+            "Lechuga",  
+            "Zanahoria",  
+            "Aceite de oliva",  
+            "Limón"  
+        ],  
+        "preparacion": [  
+            "Untar una capa de hummus sobre la tortilla",  
+            "Colocar las verduras cortadas (pepino, tomate, zanahoria) y lechuga",  
+            "Rociar con aceite de oliva y unas gotas de limón",  
+            "Enrollar la tortilla y cortar en mitades"  
+        ]  
+    },
+    {  
+        "titulo": "Tarta de Manzana Saludable",  
+        "imagen": "images/tarta-manzana-saludable.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Manzanas",  
+            "Harina integral",  
+            "Canela",  
+            "Manteca de coco",  
+            "Endulzante natural",  
+            "Nueces"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno a 180°C",  
+            "Mezclar la harina, canela y endulzante",  
+            "Añadir la manteca de coco derretida y formar una masa",  
+            "Colocar la mezcla de masa en un molde para tarta y cubrir con las manzanas en rodajas",  
+            "Hornear durante 30 minutos, decorar con nueces"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Lentejas",  
+        "imagen": "images/sopa-lentejas.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Lentejas",  
+            "Zanahoria",  
+            "Apio",  
+            "Cebolla",  
+            "Ajo",  
+            "Caldo de verduras",  
+            "Aceite de oliva",  
+            "Tomate",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sofreír la cebolla, ajo, zanahoria y apio en aceite de oliva",  
+            "Agregar las lentejas y el caldo de verduras",  
+            "Cocinar a fuego lento hasta que las lentejas estén tiernas",  
+            "Añadir tomate picado, sal y pimienta al gusto"  
+        ]  
+    },
+    {  
+        "titulo": "Pancakes de Avena y Plátano",  
+        "imagen": "images/pancakes-avena-platano.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Avena",  
+            "Plátano",  
+            "Leche de almendra",  
+            "Huevos",  
+            "Canela",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Triturar el plátano y mezclar con avena, leche, huevos, canela y miel",  
+            "Cocinar pequeños pancakes en una sartén antiadherente",  
+            "Servir con miel y rodajas de plátano"  
+        ]  
+    },
+    {  
+        "titulo": "Tacos de Pescado",  
+        "imagen": "images/tacos-pescado.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Filetes de pescado blanco",  
+            "Tortillas de maíz",  
+            "Cabbage rallado",  
+            "Cilantro",  
+            "Limón",  
+            "Aguacate",  
+            "Salsa picante"  
+        ],  
+        "preparacion": [  
+            "Cocinar el pescado a la parrilla o al sartén",  
+            "Calentar las tortillas de maíz",  
+            "Montar los tacos con el pescado, repollo rallado, cilantro, rodajas de aguacate y un toque de salsa picante"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Yogur con Frutas y Granola",  
+        "imagen": "images/bowl-yogur-frutas.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Yogur griego",  
+            "Fresas",  
+            "Plátano",  
+            "Granola",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Colocar el yogur en un bowl",  
+            "Añadir las frutas picadas y granola por encima",  
+            "Rociar con un poco de miel"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada Mediterránea de Atún",  
+        "imagen": "images/ensalada-mediterranea-atun.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Atún en lata",  
+            "Lechuga",  
+            "Pepino",  
+            "Tomate",  
+            "Aceitunas negras",  
+            "Queso feta",  
+            "Aceite de oliva",  
+            "Vinagre balsámico",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Escurrir y desmenuzar el atún",  
+            "Cortar las verduras en trozos pequeños",  
+            "Mezclar el atún con las verduras y aceitunas",  
+            "Añadir queso feta desmenuzado",  
+            "Aliñar con aceite de oliva, vinagre balsámico, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Smoothie de Mango y Espinaca",  
+        "imagen": "imagen/ensalada 23.jpg",  
+        "tiempo": "5 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Mango congelado",  
+            "Espinacas frescas",  
+            "Leche de almendra",  
+            "Plátano",  
+            "Semillas de chía", 
+            "200 calorias"
+        ],  
+        "preparacion": [  
+            "Colocar todos los ingredientes en una licuadora",  
+            "Mezclar hasta obtener una consistencia suave",  
+            "Servir inmediatamente en un vaso"  
+        ]  
+    },
+    {  
+        "titulo": "Tostadas de Aguacate y Huevo",  
+        "imagen": "images/tostadas-aguacate-huevo.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pan integral",  
+            "Aguacate",  
+            "Huevo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta",  
+            "Limón"  
+        ],  
+        "preparacion": [  
+            "Tostar el pan integral",  
+            "Aplastar el aguacate con un tenedor y añadir sal, pimienta y unas gotas de limón",  
+            "Freír el huevo al gusto",  
+            "Colocar el aguacate sobre las tostadas y añadir el huevo frito encima"  
+        ]  
+    },
+    {  
+        "titulo": "Pechuga de Pollo al Limón",  
+        "imagen": "images/pechuga-pollo-limon.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Pechugas de pollo",  
+            "Limón",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta",  
+            "Perejil"  
+        ],  
+        "preparacion": [  
+            "Marinar el pollo con el jugo de limón, ajo picado, aceite de oliva, sal y pimienta",  
+            "Cocinar el pollo en una sartén a fuego medio hasta que esté bien dorado por ambos lados",  
+            "Servir con perejil fresco picado"  
+        ]  
+    },
+    {  
+        "titulo": "Bowl de Açaí con Granola y Frutas",  
+        "imagen": "images/bowl-acai-frutas.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Purée de açaí",  
+            "Banana",  
+            "Fresas",  
+            "Granola",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Colocar el purée de açaí en un bowl",  
+            "Añadir las frutas frescas cortadas (plátano y fresas)",  
+            "Agregar granola por encima y rociar con un poco de miel"  
+        ]  
+    },
+    {  
+        "titulo": "Pasta de Calabacín con Pesto",  
+        "imagen": "images/pasta-calabacin-pesto.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Calabacín",  
+            "Albahaca fresca",  
+            "Ajo",  
+            "Piñones",  
+            "Aceite de oliva",  
+            "Queso parmesano",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cortar el calabacín en espiral o en tiras finas para formar la pasta",  
+            "Preparar el pesto triturando albahaca, ajo, piñones, aceite de oliva y queso parmesano",  
+            "Mezclar el calabacín con el pesto y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Tomate Casera",  
+        "imagen": "images/sopa-tomate-casera.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "150 kcal",  
+        "ingredientes": [  
+            "Tomates",  
+            "Cebolla",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Caldo de verduras",  
+            "Albahaca",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sofreír la cebolla y ajo en aceite de oliva hasta que estén dorados",  
+            "Añadir los tomates y cocinar por 10 minutos",  
+            "Añadir caldo de verduras y hervir por 10 minutos más",  
+            "Triturar la mezcla hasta obtener una crema suave, agregar albahaca, sal y pimienta al gusto"  
+        ]  
+    },
+    {  
+        "titulo": "Hamburguesa de Pavo",  
+        "imagen": "images/hamburguesa-pavo.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Carne de pavo molida",  
+            "Ajo",  
+            "Cebolla",  
+            "Pan integral",  
+            "Lechuga",  
+            "Tomate",  
+            "Kétchup"  
+        ],  
+        "preparacion": [  
+            "Mezclar la carne de pavo con ajo y cebolla picados",  
+            "Formar hamburguesas y cocinarlas en una sartén o parrilla",  
+            "Colocar las hamburguesas en pan integral con lechuga, tomate y kétchup"  
+        ]  
+    },
+    {  
+        "titulo": "Arroz con Pollo y Verduras",  
+        "imagen": "images/arroz-pollo-verduras.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Arroz integral",  
+            "Guisantes",  
+            "Zanahorias",  
+            "Pimiento rojo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocinar el arroz integral",  
+            "Cortar el pollo en trozos y cocinarlo en una sartén con aceite de oliva",  
+            "Añadir las verduras (guisantes, zanahorias y pimiento) y cocinar hasta que estén tiernas",  
+            "Mezclar el arroz con el pollo y las verduras, y sazonar con sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Wrap de Pollo y Hummus",  
+        "imagen": "images/wrap-pollo-hummus.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Hummus",  
+            "Tortillas integrales",  
+            "Espinacas",  
+            "Pepino",  
+            "Tomate",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocinar el pollo y cortarlo en tiras",  
+            "Untar hummus en la tortilla",  
+            "Añadir el pollo, espinacas, pepino y tomate",  
+            "Enrollar el wrap y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Salmón a la Parrilla con Salsa de Miel y Mostaza",  
+        "imagen": "images/salmon-parrilla-miel-mostaza.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Filetes de salmón",  
+            "Miel",  
+            "Mostaza",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Mezclar miel, mostaza, ajo picado, aceite de oliva, sal y pimienta para hacer la salsa",  
+            "Colocar los filetes de salmón en una parrilla precalentada",  
+            "Pintar el salmón con la salsa y cocinar por 10-12 minutos",  
+            "Servir caliente con la salsa restante"  
+        ]  
+    },
+    {  
+        "titulo": "Pasta Integral con Salsa de Tomate y Albahaca",  
+        "imagen": "images/pasta-integral-salsa-tomate.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pasta integral",  
+            "Tomates",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Albahaca fresca",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocinar la pasta integral según las instrucciones del paquete",  
+            "Sofreír el ajo picado en aceite de oliva y añadir los tomates picados",  
+            "Cocinar a fuego medio hasta que los tomates se deshagan",  
+            "Añadir albahaca fresca, sal y pimienta al gusto",  
+            "Mezclar la salsa con la pasta y servir"  
+        ]  
+    },
+    {  
+        "titulo": "Ceviche Peruano",  
+        "imagen": "images/ceviche-peruano.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Pescado blanco fresco (como corvina o lenguado)",  
+            "Jugo de limón",  
+            "Cebolla morada",  
+            "Ají limo",  
+            "Cilantro",  
+            "Sal",  
+            "Pimienta",  
+            "Camote",  
+            "Choclo",  
+            "Hojas de lechuga"  
+        ],  
+        "preparacion": [  
+            "Cortar el pescado en cubos pequeños y marinar en el jugo de limón",  
+            "Agregar la cebolla morada en rodajas finas, el ají limo picado, cilantro, sal y pimienta",  
+            "Dejar reposar durante unos minutos",  
+            "Servir el ceviche acompañado de camote, choclo y hojas de lechuga"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa Criolla",  
+        "imagen": "images/sopa-criolla.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Carne de res",  
+            "Fideos",  
+            "Huevo",  
+            "Tomate",  
+            "Papa",  
+            "Ajo",  
+            "Cilantro",  
+            "Pimienta",  
+            "Aceite"  
+        ],  
+        "preparacion": [  
+            "Hervir la carne en agua con ajo, cebolla y tomate hasta que esté cocida",  
+            "Sacar la carne y desmenuzarla",  
+            "Añadir los fideos, papas y cocinar",  
+            "Batir un huevo y añadirlo a la sopa, dejando que se cocine",  
+            "Decorar con cilantro y servir caliente"  
+        ]  
+    },
+    {  
+        "titulo": "Causa Rellena de Atún",  
+        "imagen": "images/causa-rellena-atun.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Papa amarilla",  
+            "Atún enlatado",  
+            "Mayonesa",  
+            "Ají amarillo",  
+            "Aceitunas",  
+            "Limón",  
+            "Huevo duro"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas, hacer un puré y mezclar con ají amarillo y limón",  
+            "Mezclar el atún con mayonesa",  
+            "Formar capas de puré de papa y atún, decorando con aceitunas y huevo duro"  
+        ]  
+    },
+    {  
+        "titulo": "Pescado a la Parrilla con Salsa de Maracuyá",  
+        "imagen": "images/pescado-parrilla-maracuya.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Filetes de pescado",  
+            "Maracuyá",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta",  
+            "Cilantro"  
+        ],  
+        "preparacion": [  
+            "Marinar el pescado con ajo, sal y pimienta",  
+            "Cocinar el pescado a la parrilla",  
+            "Preparar la salsa de maracuyá con el jugo de la fruta y cilantro",  
+            "Servir el pescado con la salsa de maracuyá"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Quinua con Pollo",  
+        "imagen": "images/ensalada-quinua-pollo.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Quinua",  
+            "Pechuga de pollo a la plancha",  
+            "Espinacas",  
+            "Pepino",  
+            "Tomate",  
+            "Aguacate",  
+            "Aceite de oliva",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la quinua y enfriarla",  
+            "Cocinar la pechuga de pollo a la plancha",  
+            "Mezclar la quinua con las verduras frescas (espinacas, pepino, tomate y aguacate)",  
+            "Añadir el pollo desmenuzado",  
+            "Aliñar con aceite de oliva, limón, sal y pimienta al gusto"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Verduras Ligera",  
+        "imagen": "images/sopa-verduras.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Calabaza",  
+            "Zanahoria",  
+            "Apio",  
+            "Espinacas",  
+            "Ajo",  
+            "Cebolla",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Picar las verduras en trozos pequeños",  
+            "Sofreír cebolla y ajo en aceite de oliva",  
+            "Agregar las verduras y agua, y dejar cocer hasta que estén tiernas",  
+            "Sazonar con sal y pimienta al gusto",  
+            "Servir caliente"  
+        ]  
+    },
+    {  
+        "titulo": "Pechuga de Pollo al Limón",  
+        "imagen": "images/pechuga-pollo-limon.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "220 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Limón",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta",  
+            "Perejil fresco"  
+        ],  
+        "preparacion": [  
+            "Marinar el pollo con jugo de limón, ajo picado, sal y pimienta",  
+            "Cocinar la pechuga de pollo en una sartén con un poco de aceite de oliva",  
+            "Cocinar hasta que esté dorada por fuera y jugosa por dentro",  
+            "Servir con perejil fresco picado"  
+        ]  
+    },
+    {  
+        "titulo": "Tartar de Atún",  
+        "imagen": "images/tartar-atun.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Atún fresco",  
+            "Aguacate",  
+            "Cebollín",  
+            "Salsa de soja baja en sodio",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cortar el atún en cubos pequeños",  
+            "Picar el aguacate y el cebollín",  
+            "Mezclar el atún con el aguacate, cebollín, salsa de soja y jugo de limón",  
+            "Sazonar con sal y pimienta al gusto",  
+            "Servir como entrada fresca"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Tomate y Palta",  
+        "imagen": "images/ensalada-tomate-palta.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Tomate",  
+            "Aguacate",  
+            "Cebolla morada",  
+            "Limón",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cortar el tomate, la palta y la cebolla morada en rodajas",  
+            "Colocar en un plato y aliñar con jugo de limón, aceite de oliva, sal y pimienta",  
+            "Mezclar bien y servir fresca"  
+        ]  
+    },
+    {  
+        "titulo": "Pescado a la Parrilla con Ensalada de Quinua",  
+        "imagen": "images/pescado-parrilla-ensalada-quinua.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Filete de pescado blanco",  
+            "Limón",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Quinua",  
+            "Pepino",  
+            "Tomate",  
+            "Cilantro",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Marinar el pescado con jugo de limón, ajo picado, sal y pimienta",  
+            "Cocinar el pescado a la parrilla hasta que esté bien cocido",  
+            "Cocer la quinua y enfriarla",  
+            "Mezclar la quinua con pepino, tomate, cilantro, sal y pimienta",  
+            "Servir el pescado junto a la ensalada de quinua"  
+        ]  
+    },
+    {  
+        "titulo": "Salmón al Horno con Verduras",  
+        "imagen": "images/salmon-horno-verduras.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Filetes de salmón",  
+            "Espárragos",  
+            "Zanahorias",  
+            "Aceite de oliva",  
+            "Limón",  
+            "Ajo",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Precalentar el horno a 180°C",  
+            "Colocar el salmón en una bandeja para hornear, sazonar con sal, pimienta, ajo picado y jugo de limón",  
+            "Agregar las verduras alrededor del salmón y rociar con un poco de aceite de oliva",  
+            "Hornear durante 20-25 minutos hasta que el salmón esté cocido y las verduras tiernas"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Tofu con Vegetales",  
+        "imagen": "images/ensalada-tofu-vegetales.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "220 kcal",  
+        "ingredientes": [  
+            "Tofu",  
+            "Pepino",  
+            "Tomate",  
+            "Zanahoria",  
+            "Aceite de oliva",  
+            "Vinagre de manzana",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cortar el tofu en cubos y los vegetales en rodajas finas",  
+            "Mezclar el tofu con los vegetales",  
+            "Aliñar con aceite de oliva, vinagre de manzana, sal y pimienta",  
+            "Servir como ensalada fresca"  
+        ]  
+    },
+    {  
+        "titulo": "Tartar de Salmón y Aguacate",  
+        "imagen": "images/tartar-salmon-aguacate.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Salmón fresco",  
+            "Aguacate",  
+            "Cebollín",  
+            "Salsa de soja baja en sodio",  
+            "Jugo de limón",  
+            "Semillas de sésamo"  
+        ],  
+        "preparacion": [  
+            "Cortar el salmón en cubos pequeños y el aguacate en trozos",  
+            "Mezclar el salmón y aguacate con cebollín picado, salsa de soja y jugo de limón",  
+            "Decorar con semillas de sésamo y servir como aperitivo"  
+        ]  
+    },
+    {  
+        "titulo": "Pechuga de Pavo al Horno con Vegetales",  
+        "imagen": "images/pechuga-pavo-horno-vegetales.jpg",  
+        "tiempo": "35 min",  
+        "calorias": "280 kcal",  
+        "ingredientes": [  
+            "Pechuga de pavo",  
+            "Brócoli",  
+            "Espárragos",  
+            "Aceite de oliva",  
+            "Ajo",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sazonar la pechuga de pavo con ajo picado, sal, pimienta y jugo de limón",  
+            "Colocar la pechuga de pavo en una bandeja para hornear y rodearla de brócoli y espárragos",  
+            "Rociar con aceite de oliva y hornear a 180°C durante 30-35 minutos hasta que esté cocido"  
+        ]  
+    },
+    {  
+        "titulo": "Tajine de Pollo con Frutas",  
+        "imagen": "images/tajine-pollo-frutas.jpg",  
+        "tiempo": "35 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Dátiles",  
+            "Ciruelas pasas",  
+            "Zanahorias",  
+            "Pimiento rojo",  
+            "Cebolla",  
+            "Ajo",  
+            "Jengibre",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sazonar el pollo con sal, pimienta y jengibre rallado",  
+            "Sofreír el pollo con cebolla, ajo y zanahorias en rodajas",  
+            "Agregar las frutas secas (dátiles y ciruelas) y cocinar todo junto con un poco de agua",  
+            "Dejar que se cocine a fuego lento hasta que el pollo esté tierno y la salsa espese"  
+        ]  
+    },
+    {  
+        "titulo": "Empanadas de Charque Saludables",  
+        "imagen": "images/empanadas-charque.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Carne de charque desmenuzada",  
+            "Harina integral",  
+            "Aceite de oliva",  
+            "Espinacas",  
+            "Cebolla",  
+            "Ajo",  
+            "Comino",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la carne de charque y desmenuzarla",  
+            "Sofreír cebolla, ajo y espinacas picadas",  
+            "Mezclar las espinacas con la carne de charque",  
+            "Formar la masa con harina integral, agua y sal",  
+            "Rellenar las empanadas con la mezcla y hornearlas en lugar de freírlas"  
+        ]  
+    },
+    {  
+        "titulo": "Calapurca",  
+        "imagen": "images/calapurca.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Papa",  
+            "Acelga",  
+            "Zanahoria",  
+            "Maíz",  
+            "Ajo",  
+            "Cebolla",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas y el maíz",  
+            "Sofreír cebolla, ajo y zanahorias picadas",  
+            "Mezclar las papas cocidas con las verduras y agregar la acelga",  
+            "Cocinar todo junto durante unos minutos y sazonar con sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Pique a lo Macho Saludable",  
+        "imagen": "images/pique-machosaludable.jpg",  
+        "tiempo": "35 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Carne magra de res",  
+            "Pimientos",  
+            "Cebolla",  
+            "Tomate",  
+            "Ajo",  
+            "Papa",  
+            "Ají amarillo",  
+            "Sal",  
+            "Pimienta",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas y cortarlas en rodajas",  
+            "Sofreír la carne de res con ajo, cebolla, pimientos y tomate",  
+            "Añadir el ají amarillo y sazonar con sal y pimienta",  
+            "Servir la carne sobre las papas"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Papaya con Menta",  
+        "imagen": "images/ensalada-papaya-menta.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "150 kcal",  
+        "ingredientes": [  
+            "Papaya",  
+            "Menta fresca",  
+            "Limón",  
+            "Miel",  
+            "Pistachos"  
+        ],  
+        "preparacion": [  
+            "Cortar la papaya en cubos",  
+            "Mezclar con menta picada",  
+            "Aliñar con jugo de limón, miel y pistachos picados"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Maní Saludable",  
+        "imagen": "images/sopa-mani-saludable.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Maní",  
+            "Papa",  
+            "Pechuga de pollo",  
+            "Zanahoria",  
+            "Cebolla",  
+            "Ajo",  
+            "Comino",  
+            "Sal",  
+            "Pimienta",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer el maní y las papas en agua",  
+            "Sofreír cebolla, ajo y zanahoria picada en aceite de oliva",  
+            "Agregar el pollo desmenuzado y las papas cocidas al caldo",  
+            "Cocinar hasta que la sopa esté espesa, sazonar con sal, pimienta y comino"  
+        ]  
+    },
+    {  
+        "titulo": "Fritanga Vegetariana",  
+        "imagen": "images/fritanga-vegetariana.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "220 kcal",  
+        "ingredientes": [  
+            "Papa",  
+            "Zanahoria",  
+            "Choclo",  
+            "Espinacas",  
+            "Cebolla",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas, zanahorias y choclo",  
+            "Sofreír cebolla y ajo en aceite de oliva",  
+            "Agregar las espinacas y las verduras cocidas",  
+            "Sazonar con sal y pimienta, dejar que se integren bien los sabores"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Chirimoya",  
+        "imagen": "images/ensalada-chirimoya.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Chirimoya",  
+            "Fresas",  
+            "Menta fresca",  
+            "Limón",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Pelar la chirimoya y cortarla en trozos",  
+            "Cortar las fresas en rodajas",  
+            "Mezclar todo en un bol con menta fresca picada",  
+            "Aliñar con jugo de limón y miel"  
+        ]  
+    },
+    {  
+        "titulo": "Charquekan Saludable",  
+        "imagen": "images/charquekan.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Carne de charque magra",  
+            "Papa",  
+            "Habitas",  
+            "Tomate",  
+            "Cebolla",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas y habas",  
+            "Sofreír cebolla y ajo en aceite de oliva",  
+            "Agregar la carne de charque desmenuzada y las papas",  
+            "Cocinar todo junto, sazonar con sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada Chilena",  
+        "imagen": "images/ensalada-chilena.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "150 kcal",  
+        "ingredientes": [  
+            "Tomates",  
+            "Cebolla morada",  
+            "Cilantro",  
+            "Aceite de oliva",  
+            "Vinagre",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cortar los tomates y la cebolla morada en rodajas finas",  
+            "Picar el cilantro y agregarlo a las verduras",  
+            "Aliñar con aceite de oliva, vinagre, sal y pimienta al gusto"  
+        ]  
+    },
+    {  
+        "titulo": "Cazuela de Ave Saludable",  
+        "imagen": "images/cazuela-ave-saludable.jpg",  
+        "tiempo": "50 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo sin piel",  
+            "Zapallo",  
+            "Papas",  
+            "Porotos verdes",  
+            "Cebolla",  
+            "Ajo",  
+            "Calabaza",  
+            "Pimiento rojo",  
+            "Comino",  
+            "Sal",  
+            "Pimienta",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer la pechuga de pollo en agua con sal, cebolla, ajo, comino y pimienta",  
+            "Agregar las papas, zapallo, porotos verdes, calabaza y pimiento rojo",  
+            "Cocinar todo junto hasta que las verduras estén tiernas y el pollo bien cocido",  
+            "Servir caliente y disfrutar"  
+        ]  
+    },
+    {  
+        "titulo": "Pescado a la Plancha con Puré de Papas",  
+        "imagen": "images/pescado-plancha-pure.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Filete de merluza",  
+            "Papas",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocinar las papas hasta que estén tiernas",  
+            "Hacer un puré con las papas cocidas y sazonar con sal y un poco de aceite de oliva",  
+            "Cocinar el filete de merluza a la plancha con un poco de aceite de oliva, ajo, sal y pimienta",  
+            "Servir el pescado junto al puré de papas y rociar con jugo de limón"  
+        ]  
+    },
+    {  
+        "titulo": "Tomaticán",  
+        "imagen": "images/tomatican.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Tomates",  
+            "Cebolla",  
+            "Pimiento verde",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Comino",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cortar los tomates, cebolla y pimiento verde en trozos pequeños",  
+            "Sofreír la cebolla y el ajo en aceite de oliva",  
+            "Agregar el pimiento y los tomates picados, sazonar con comino, sal y pimienta",  
+            "Cocinar a fuego lento hasta que las verduras estén tiernas y el líquido se haya reducido"  
+        ]  
+    },
+    {  
+        "titulo": "Pebre Chileno Saludable",  
+        "imagen": "images/pebre-chileno.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "100 kcal",  
+        "ingredientes": [  
+            "Tomates",  
+            "Cebolla morada",  
+            "Cilantro",  
+            "Ajo",  
+            "Pimiento rojo",  
+            "Aceite de oliva",  
+            "Vinagre",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Picar los tomates, cebolla, pimiento rojo y cilantro",  
+            "Agregar el ajo picado y aliñar con aceite de oliva, vinagre, sal y pimienta",  
+            "Mezclar bien y dejar reposar en la nevera por unos minutos antes de servir"  
+        ]  
+    },
+    {  
+        "titulo": "Pastel de Choclo Ligero",  
+        "imagen": "images/pastel-choclo-ligero.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Choclo",  
+            "Pechuga de pollo desmenuzada",  
+            "Cebolla",  
+            "Pimiento rojo",  
+            "Comino",  
+            "Leche descremada",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer el choclo y triturarlo hasta obtener un puré",  
+            "Sofreír la cebolla, pimiento rojo y pollo desmenuzado con comino, sal y pimienta",  
+            "Mezclar el puré de choclo con la mezcla de pollo y ponerlo en un molde para hornear",  
+            "Cubrir con leche descremada y hornear a 180°C hasta que la superficie esté dorada"  
+        ]  
+    },
+    {  
+        "titulo": "Mote con Huesillo Saludable",  
+        "imagen": "images/mote-huesillo-saludable.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Mote",  
+            "Duraznos secos",  
+            "Agua",  
+            "Stevia o miel (opcional)"  
+        ],  
+        "preparacion": [  
+            "Cocer el mote en agua hasta que esté tierno",  
+            "Rehidratar los duraznos secos en agua caliente",  
+            "Servir el mote con los duraznos y un poco de agua de la cocción de los duraznos",  
+            "Endulzar con stevia o miel al gusto"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Pescado a la Chilena",  
+        "imagen": "images/sopa-pescado-chilena.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Filete de pescado blanco",  
+            "Tomate",  
+            "Cebolla",  
+            "Ajo",  
+            "Papas",  
+            "Zanahorias",  
+            "Pimiento",  
+            "Pimienta",  
+            "Sal",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas y zanahorias",  
+            "Sofreír cebolla, ajo y pimiento en aceite de oliva",  
+            "Agregar los tomates picados y el pescado",  
+            "Cocinar hasta que el pescado esté listo y todo esté bien integrado"  
+        ]  
+    },
+    {  
+        "titulo": "Feijoada Vegetariana",  
+        "imagen": "images/feijoada-vegetariana.jpg",  
+        "tiempo": "60 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Frijoles negros",  
+            "Zanahorias",  
+            "Choclo",  
+            "Tomates",  
+            "Espinacas",  
+            "Cebolla",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Pimiento",  
+            "Comino",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer los frijoles negros en agua hasta que estén tiernos",  
+            "Sofreír cebolla, ajo y pimiento picados en aceite de oliva",  
+            "Agregar zanahorias, choclo, tomates y espinacas, y cocinar por unos minutos",  
+            "Incorporar los frijoles cocidos, sazonar con comino, sal y pimienta, y dejar cocinar todo junto hasta que los sabores se mezclen bien"  
+        ]  
+    },
+    {  
+        "titulo": "Açai Bowl Saludable",  
+        "imagen": "images/acai-bowl.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Pulpa de açai congelada",  
+            "Plátano",  
+            "Frambuesas",  
+            "Granola",  
+            "Semillas de chía",  
+            "Miel (opcional)"  
+        ],  
+        "preparacion": [  
+            "Licuar la pulpa de açai con plátano y un poco de agua hasta obtener una consistencia espesa",  
+            "Verter la mezcla en un tazón",  
+            "Decorar con frambuesas, granola, semillas de chía y un poco de miel si se desea endulzar"  
+        ]  
+    },
+    {  
+        "titulo": "Salada de Palmito e Abacate",  
+        "imagen": "images/salada-palmito-abacate.jpg",  
+        "tiempo": "15 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Palmito",  
+            "Aguacate",  
+            "Tomates",  
+            "Cebolla morada",  
+            "Aceite de oliva",  
+            "Vinagre balsámico",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cortar el palmito, aguacate y tomates en trozos",  
+            "Picar la cebolla morada",  
+            "Mezclar todo en un bol y aliñar con aceite de oliva, vinagre balsámico, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Bolo de Banana Fit",  
+        "imagen": "images/bolo-banana-fit.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Plátanos maduros",  
+            "Harina integral",  
+            "Polvo de hornear",  
+            "Canela",  
+            "Aceite de coco",  
+            "Huevos",  
+            "Stevia o miel"  
+        ],  
+        "preparacion": [  
+            "Amasar los plátanos maduros hasta hacer un puré",  
+            "Mezclar el puré con huevos, aceite de coco, canela, polvo de hornear, harina integral y stevia o miel",  
+            "Verter la mezcla en un molde y hornear a 180°C por unos 40 minutos o hasta que un palillo salga limpio"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Calabaza y Jengibre",  
+        "imagen": "images/sopa-calabaza-jengibre.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Calabaza",  
+            "Cebolla",  
+            "Ajo",  
+            "Jengibre fresco",  
+            "Caldo de verduras bajo en sodio",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la calabaza hasta que esté tierna",  
+            "Sofreír cebolla, ajo y jengibre picados en aceite de oliva",  
+            "Agregar la calabaza cocida y el caldo de verduras",  
+            "Cocinar todo junto durante 10 minutos, luego licuar hasta obtener una textura suave",  
+            "Sazonar con sal y pimienta al gusto"  
+        ]  
+    },
+    {  
+        "titulo": "Escondidinho de Carne",  
+        "imagen": "images/escondidinho-carne.jpg",  
+        "tiempo": "50 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Carne magra molida",  
+            "Papa",  
+            "Leche descremada",  
+            "Ajo",  
+            "Cebolla",  
+            "Tomate",  
+            "Comino",  
+            "Sal",  
+            "Pimienta",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas hasta que estén suaves, luego hacer un puré con leche descremada",  
+            "Sofreír cebolla, ajo y carne molida en aceite de oliva",  
+            "Agregar tomate picado y sazonar con comino, sal y pimienta",  
+            "En un molde, colocar una capa de carne y cubrir con el puré de papas",  
+            "Hornear a 180°C por unos 20 minutos o hasta que la parte superior esté dorada"  
+        ]  
+    },
+    {  
+        "titulo": "Tapioca con Frutas",  
+        "imagen": "images/tapioca-frutas.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Harina de tapioca",  
+            "Plátano",  
+            "Fresas",  
+            "Mango",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Cocinar la harina de tapioca en una sartén hasta que forme una masa",  
+            "Rellenar con las frutas picadas (plátano, fresas y mango)",  
+            "Cerrar la tapioca y rociar con un poco de miel"  
+        ]  
+    },
+    {  
+        "titulo": "Salada de Grãos e Abóbora",  
+        "imagen": "images/salada-graos-abobora.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Granos de arroz integral",  
+            "Calabaza",  
+            "Espinacas",  
+            "Tomates cherry",  
+            "Aceite de oliva",  
+            "Vinagre de manzana",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer los granos de arroz integral",  
+            "Cocer la calabaza hasta que esté tierna y cortarla en cubos",  
+            "Mezclar los granos, calabaza, espinacas y tomates cherry",  
+            "Aliñar con aceite de oliva, vinagre, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Locro de Papas Light",  
+        "imagen": "images/locro-papas-light.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Papas",  
+            "Zapallo",  
+            "Cebolla",  
+            "Ajo",  
+            "Leche descremada",  
+            "Cilantro",  
+            "Comino",  
+            "Sal",  
+            "Pimienta",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocer las papas y el zapallo hasta que estén tiernos",  
+            "Sofreír cebolla y ajo en un poco de aceite de oliva",  
+            "Agregar el zapallo y las papas cocidas a la sartén, triturar hasta obtener una consistencia suave",  
+            "Agregar leche descremada, cilantro picado, comino, sal y pimienta, cocinar a fuego lento hasta que se espese"  
+        ]  
+    },
+    {  
+        "titulo": "Encebollado de Pescado Light",  
+        "imagen": "images/encebollado-pescado-light.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pescado blanco (tilapia o mero)",  
+            "Cebolla roja",  
+            "Tomates",  
+            "Pimiento verde",  
+            "Ajo",  
+            "Cilantro",  
+            "Comino",  
+            "Limón",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer el pescado con un poco de sal y agua hasta que esté listo",  
+            "Sofreír cebolla, ajo, pimiento y tomates en una sartén con un poco de aceite de oliva",  
+            "Agregar el pescado cocido desmenuzado, cilantro, comino, sal y pimienta",  
+            "Exprimir jugo de limón y servir con una rodaja de limón"  
+        ]  
+    },
+    {  
+        "titulo": "Ceviche de Camarón Ecuatoriano",  
+        "imagen": "images/ceviche-camaron-ecuador.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Camarones cocidos",  
+            "Cebolla morada",  
+            "Tomates",  
+            "Pepino",  
+            "Limón",  
+            "Cilantro",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocinar los camarones y picarlos en trozos pequeños",  
+            "Picar cebolla, tomates, pepino y cilantro",  
+            "Mezclar todos los ingredientes y aliñar con jugo de limón, aceite de oliva, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Verduras con Pollo",  
+        "imagen": "images/sopa-verduras-pollo.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo sin piel",  
+            "Zanahoria",  
+            "Choclo",  
+            "Espinacas",  
+            "Cebolla",  
+            "Ajo",  
+            "Comino",  
+            "Caldo de verduras",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer la pechuga de pollo en caldo de verduras con cebolla, ajo, comino, sal y pimienta",  
+            "Agregar las zanahorias, choclo y espinacas a la sopa",  
+            "Cocinar hasta que las verduras estén tiernas y el pollo bien cocido",  
+            "Desmenuzar el pollo y agregarlo de nuevo a la sopa antes de servir"  
+        ]  
+    },
+    {  
+        "titulo": "Tamales Ecuatorianos de Pollo Saludables",  
+        "imagen": "images/tamales-ecuador.jpg",  
+        "tiempo": "90 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Maíz molido",  
+            "Cebolla",  
+            "Ajo",  
+            "Pimiento rojo",  
+            "Aceite de oliva",  
+            "Comino",  
+            "Sal",  
+            "Hojas de maíz"  
+        ],  
+        "preparacion": [  
+            "Cocer el pollo y desmenuzarlo",  
+            "Sofreír cebolla, ajo y pimiento rojo en aceite de oliva",  
+            "Mezclar el pollo con el sofrito y el maíz molido, sazonar con comino y sal",  
+            "Colocar la mezcla en hojas de maíz, envolver y cocer al vapor hasta que estén cocidos"  
+        ]  
+    },
+    {  
+        "titulo": "Arroz con Menestra y Ensalada",  
+        "imagen": "images/arroz-menestra-ensalada.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Arroz integral",  
+            "Lentejas",  
+            "Tomates",  
+            "Pepino",  
+            "Cebolla",  
+            "Cilantro",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer el arroz integral y las lentejas por separado",  
+            "Preparar una ensalada con tomates, pepino, cebolla y cilantro picado",  
+            "Aliñar con aceite de oliva, sal y pimienta",  
+            "Servir el arroz y menestra junto con la ensalada"  
+        ]  
+    },
+    {  
+        "titulo": "Mote Pillo Saludable",  
+        "imagen": "images/mote-pillo-saludable.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Mote cocido",  
+            "Huevos",  
+            "Cebolla",  
+            "Ajo",  
+            "Pimiento rojo",  
+            "Comino",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sofreír cebolla, ajo y pimiento rojo en aceite de oliva",  
+            "Batir los huevos y agregar al sofrito",  
+            "Agregar el mote cocido y sazonar con comino, sal y pimienta",  
+            "Mezclar bien y cocinar hasta que los ingredientes estén bien integrados"  
+        ]  
+    },
+    {  
+        "titulo": "Tigrillo Ecuatoriano Ligero",  
+        "imagen": "images/tigrillo-ecuador.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Plátano verde",  
+            "Pechuga de pollo",  
+            "Cebolla",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Comino",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer el plátano verde hasta que esté tierno y triturarlo",  
+            "Cocer el pollo y desmenuzarlo",  
+            "Sofreír cebolla y ajo en aceite de oliva",  
+            "Mezclar el plátano triturado, el pollo, el comino, sal y pimienta",  
+            "Cocinar hasta que todo esté bien integrado"  
+        ]  
+    },
+    {  
+        "titulo": "Arepa de Huevo Saludable",  
+        "imagen": "images/arepa-huevo-saludable.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "200 kcal",  
+        "ingredientes": [  
+            "Harina de maíz integral",  
+            "Aceite de oliva",  
+            "Huevos",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Mezclar la harina de maíz integral con agua, sal y formar una masa",  
+            "Amasar y formar las arepas",  
+            "Cocinar las arepas en una sartén con un poco de aceite de oliva hasta que estén doradas",  
+            "Hacer un hueco en el centro de cada arepa y agregar un huevo",  
+            "Volver a cocinar hasta que el huevo esté cocido y la arepa crujiente"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Ceviche de Pescado",  
+        "imagen": "images/ceviche-pescado-colombia.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Pescado blanco (como tilapia o mero)",  
+            "Cebolla morada",  
+            "Tomates",  
+            "Pepino",  
+            "Acelga o espinaca",  
+            "Jugo de limón",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta",  
+            "Cilantro"  
+        ],  
+        "preparacion": [  
+            "Cortar el pescado en trozos pequeños y marinar en jugo de limón por 10 minutos",  
+            "Picar la cebolla, tomates, pepino y cilantro",  
+            "Mezclar todos los ingredientes y aliñar con aceite de oliva, sal y pimienta",  
+            "Servir frío con acelga o espinaca fresca"  
+        ]  
+    },
+    {  
+        "titulo": "Sancocho de Pollo Saludable",  
+        "imagen": "images/sancocho-pollo-saludable.jpg",  
+        "tiempo": "60 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Yuca",  
+            "Papas",  
+            "Mazorca",  
+            "Zanahorias",  
+            "Cebolla",  
+            "Ajo",  
+            "Cilantro",  
+            "Comino",  
+            "Sal",  
+            "Pimienta",  
+            "Caldo de pollo bajo en sodio"  
+        ],  
+        "preparacion": [  
+            "Cocer el pollo con zanahorias, yuca, papas y mazorca en caldo de pollo junto con cebolla, ajo, cilantro, comino, sal y pimienta",  
+            "Dejar cocinar hasta que las verduras estén tiernas y el caldo haya tomado sabor",  
+            "Servir caliente con cilantro fresco por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Bandeja Paisa Light",  
+        "imagen": "images/bandeja-paisa-light.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "400 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Frijoles rojos",  
+            "Arroz integral",  
+            "Aguacate",  
+            "Tomate",  
+            "Cebolla",  
+            "Cilantro",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer los frijoles rojos y el arroz integral por separado",  
+            "Cocer la pechuga de pollo a la plancha y desmenuzarla",  
+            "Picar el aguacate, tomate, cebolla y cilantro",  
+            "Servir el arroz integral con los frijoles, agregar la pechuga de pollo desmenuzada y la ensalada de aguacate y tomate"  
+        ]  
+    },
+    {  
+        "titulo": "Cazuela de Mariscos Saludable",  
+        "imagen": "images/cazuela-mariscos-saludable.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Camarones",  
+            "Mejillones",  
+            "Calamares",  
+            "Pescado blanco",  
+            "Ajo",  
+            "Cebolla",  
+            "Tomates",  
+            "Pimiento rojo",  
+            "Cilantro",  
+            "Caldo de mariscos",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sofreír cebolla, ajo y pimiento rojo en aceite de oliva",  
+            "Agregar los tomates picados y el caldo de mariscos, cocinar por 10 minutos",  
+            "Incorporar los mariscos y cocinar por 10-15 minutos más",  
+            "Sazonar con sal, pimienta y cilantro fresco antes de servir"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Frutas Colombiana",  
+        "imagen": "images/ensalada-frutas-colombia.jpg",  
+        "tiempo": "10 min",  
+        "calorias": "150 kcal",  
+        "ingredientes": [  
+            "Mango",  
+            "Papaya",  
+            "Banano",  
+            "Piña",  
+            "Guayaba",  
+            "Jugo de limón",  
+            "Miel"  
+        ],  
+        "preparacion": [  
+            "Cortar todas las frutas en trozos pequeños",  
+            "Mezclar bien y aliñar con jugo de limón y un toque de miel"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Lentejas Colombiana",  
+        "imagen": "images/sopa-lentejas-colombia.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Lentejas",  
+            "Zanahoria",  
+            "Cebolla",  
+            "Ajo",  
+            "Pimiento rojo",  
+            "Comino",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta",  
+            "Caldo de verduras"  
+        ],  
+        "preparacion": [  
+            "Sofreír cebolla, ajo y pimiento rojo en aceite de oliva",  
+            "Agregar las lentejas, zanahoria picada y caldo de verduras",  
+            "Cocinar a fuego lento hasta que las lentejas estén tiernas, sazonar con comino, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Arroz con Gandules Saludable",  
+        "imagen": "images/arroz-con-gandules-saludable.jpg",  
+        "tiempo": "40 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Arroz integral",  
+            "Gandules",  
+            "Pechuga de pollo",  
+            "Cebolla",  
+            "Ajo",  
+            "Pimiento rojo",  
+            "Tomate",  
+            "Cilantro",  
+            "Aceite de oliva",  
+            "Comino",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer los gandules en agua con sal hasta que estén tiernos",  
+            "Sofreír cebolla, ajo, pimiento rojo y tomate en aceite de oliva",  
+            "Agregar el arroz integral y los gandules cocidos, sazonar con comino, sal y pimienta",  
+            "Cocinar todo junto hasta que el arroz esté tierno y bien integrado, agregar cilantro fresco por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Mofongo de Plátano Saludable",  
+        "imagen": "images/mofongo-platano-saludable.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Plátano verde",  
+            "Pechuga de pollo",  
+            "Ajo",  
+            "Aceite de oliva",  
+            "Cilantro",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Pelar y cocinar el plátano verde hasta que esté tierno",  
+            "Sofreír el ajo picado en aceite de oliva",  
+            "Machacar el plátano cocido junto con el ajo y el cilantro, añadir un poco de sal y pimienta",  
+            "Cocinar la pechuga de pollo a la plancha y servir sobre el mofongo"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Bacalao a la Criolla",  
+        "imagen": "images/ensalada-bacalao-criolla.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Bacalao desalado",  
+            "Cebolla",  
+            "Tomate",  
+            "Pimiento rojo",  
+            "Aceite de oliva",  
+            "Vinagre",  
+            "Ajo",  
+            "Aceitunas",  
+            "Cilantro",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Desalar el bacalao y desmenuzarlo en trozos pequeños",  
+            "Picar la cebolla, tomate, pimiento y cilantro",  
+            "Mezclar todos los ingredientes con el bacalao, añadir aceitunas y aliñar con aceite de oliva, vinagre, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Pollo Guisado Light",  
+        "imagen": "images/pollo-guisado-light.jpg",  
+        "tiempo": "50 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechugas de pollo",  
+            "Cebolla",  
+            "Ajo",  
+            "Pimiento rojo",  
+            "Tomate",  
+            "Papa",  
+            "Zanahoria",  
+            "Aceite de oliva",  
+            "Comino",  
+            "Orégano",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Sazonar el pollo con sal, pimienta, comino y orégano",  
+            "Sofreír cebolla, ajo, pimiento y tomate en aceite de oliva",  
+            "Agregar el pollo y dorarlo ligeramente",  
+            "Agregar papa y zanahoria cortadas en trozos, cubrir con agua y cocinar a fuego lento hasta que el pollo y las verduras estén tiernos"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Calabaza y Coco",  
+        "imagen": "images/sopa-calabaza-coco.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Calabaza",  
+            "Leche de coco light",  
+            "Cebolla",  
+            "Ajo",  
+            "Comino",  
+            "Pimienta",  
+            "Sal",  
+            "Aceite de oliva",  
+            "Cilantro"  
+        ],  
+        "preparacion": [  
+            "Cortar la calabaza en trozos y cocerla con cebolla y ajo",  
+            "Agregar leche de coco light, comino, sal y pimienta, y cocinar a fuego lento",  
+            "Procesar la mezcla hasta obtener una crema suave",  
+            "Servir caliente con cilantro fresco por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Tostones de Plátano con Guacamole",  
+        "imagen": "images/tostones-platano-guacamole.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "180 kcal",  
+        "ingredientes": [  
+            "Plátano verde",  
+            "Aguacate",  
+            "Cebolla",  
+            "Ajo",  
+            "Tomate",  
+            "Cilantro",  
+            "Limón",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Pelar y cortar el plátano verde en rodajas, freír en aceite de oliva hasta dorarse",  
+            "Hacer un puré con el aguacate, cebolla, tomate, cilantro, jugo de limón, sal y pimienta",  
+            "Servir los tostones con una cucharada de guacamole encima"  
+        ]  
+    },
+    {  
+        "titulo": "Bacalaito Saludable",  
+        "imagen": "images/bacalaito-saludable.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Bacalao",  
+            "Harina de avena",  
+            "Ajo",  
+            "Cebolla",  
+            "Pimiento",  
+            "Comino",  
+            "Cilantro",  
+            "Aceite de oliva",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Desalar el bacalao y desmenuzarlo",  
+            "Mezclar el bacalao con harina de avena, ajo picado, cebolla, pimiento, cilantro y especias",  
+            "Formar pequeñas tortitas y freírlas en aceite de oliva hasta dorarse"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Arroz con Verduras",  
+        "imagen": "images/ensalada-arroz-verduras.jpg",  
+        "tiempo": "20 min",  
+        "calorias": "220 kcal",  
+        "ingredientes": [  
+            "Arroz integral",  
+            "Guisantes",  
+            "Zanahorias",  
+            "Pimiento rojo",  
+            "Tomates",  
+            "Aceite de oliva",  
+            "Vinagre",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocer el arroz integral y los guisantes",  
+            "Picar las zanahorias, pimiento y tomates en cubos pequeños",  
+            "Mezclar el arroz con las verduras, aliñar con aceite de oliva, vinagre, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Ensalada de Pollo a la Parrilla con Quinoa",  
+        "imagen": "images/ensalada-pollo-quinoa.jpg",  
+        "tiempo": "30 min",  
+        "calorias": "350 kcal",  
+        "ingredientes": [  
+            "Pechuga de pollo",  
+            "Quinoa",  
+            "Espinacas",  
+            "Tomates cherry",  
+            "Pepino",  
+            "Aguacate",  
+            "Aceite de oliva",  
+            "Vinagre balsámico",  
+            "Sal",  
+            "Pimienta"  
+        ],  
+        "preparacion": [  
+            "Cocinar la quinoa según las instrucciones del paquete",  
+            "Grillar la pechuga de pollo con sal y pimienta hasta que esté cocida y desmenuzarla",  
+            "Picar los tomates, pepino y aguacate",  
+            "Mezclar todos los ingredientes en un tazón, aliñar con aceite de oliva, vinagre balsámico, sal y pimienta"  
+        ]  
+    },
+    {  
+        "titulo": "Tacos de Pescado con Salsa de Yogur",  
+        "imagen": "images/tacos-pescado-salsa-yogur.jpg",  
+        "tiempo": "25 min",  
+        "calorias": "300 kcal",  
+        "ingredientes": [  
+            "Filetes de pescado blanco (tilapia, bacalao)",  
+            "Tortillas de maíz integrales",  
+            "Yogur griego natural",  
+            "Jugo de limón",  
+            "Cilantro fresco",  
+            "Col morada",  
+            "Aguacate",  
+            "Sal",  
+            "Pimienta",  
+            "Aceite de oliva"  
+        ],  
+        "preparacion": [  
+            "Cocinar los filetes de pescado con un poco de aceite de oliva, sal y pimienta hasta que estén bien cocidos",  
+            "Mezclar el yogur griego con jugo de limón, cilantro picado, sal y pimienta para hacer la salsa",  
+            "Picar la col morada y el aguacate en rodajas finas",  
+            "Colocar el pescado en las tortillas, agregar la salsa de yogur, la col y el aguacate por encima"  
+        ]  
+    },
+    {  
+        "titulo": "Sopa de Lentejas y Verduras",  
+        "imagen": "images/sopa-lentejas-verduras.jpg",  
+        "tiempo": "45 min",  
+        "calorias": "250 kcal",  
+        "ingredientes": [  
+            "Lentejas",  
+            "Zanahorias",  
+            "Apio",  
+            "Pimiento rojo",  
+            "Tomates",  
+            "Ajo",  
+            "Cebolla",  
+            "Caldo de verduras bajo en sodio",  
+            "Aceite de oliva",  
+            "Comino",  
+            "Pimienta",  
+            "Sal"  
+        ],  
+        "preparacion": [  
+            "Sofreír cebolla, ajo, zanahorias, apio y pimiento rojo en aceite de oliva hasta que estén tiernos",  
+            "Agregar las lentejas, los tomates picados y el caldo de verduras",  
+            "Cocinar a fuego lento hasta que las lentejas estén tiernas",  
+            "Sazonar con comino, sal y pimienta y servir caliente"  
+        ]  
+    }
+    
+    
+    
+       
+];  
+
+// Función para cargar recetas  
+function cargarRecetas(termino = '') {  
+    const contenedor = document.getElementById('contenedor-recetas');  
+    contenedor.innerHTML = '';  
+
+    const recetasFiltradas = recetas.filter(receta =>   
+        receta.titulo.toLowerCase().includes(termino.toLowerCase())  
+    );  
+
+    recetasFiltradas.forEach(receta => {  
+        const tarjeta = document.createElement('div');  
+        tarjeta.classList.add('tarjeta-receta');  
+        tarjeta.innerHTML = `  
+            <h3>${receta.titulo}</h3>  
+            <img src="${receta.imagen}" alt="${receta.titulo}">  
+        `;  
+        tarjeta.onclick = () => mostrarDetallesReceta(receta);  
+        contenedor.appendChild(tarjeta);  
+    });  
+}  
+
+// Función para mostrar detalles de receta  
+function mostrarDetallesReceta(receta) {  
+    const modal = document.getElementById('modal-receta');  
+    const contenido = document.getElementById('contenido-modal');  
+    
+    contenido.innerHTML = `  
+        <h2>${receta.titulo}</h2>  
+        <img src="${receta.imagen}" alt="${receta.titulo}">  
+        <h3>Ingredientes:</h3>  
+        <ul>  
+            ${receta.ingredientes.map(ing => `<li>${ing}</li>`).join('')}  
+        </ul>  
+    `;  
+    
+    modal.style.display = 'block';  
+}  
+
+// Eventos  
+document.getElementById('boton-buscar').addEventListener('click', () => {  
+    const termino = document.getElementById('input-busqueda').value;  
+    cargarRecetas(termino);  
+});  
+
+document.querySelector('.cerrar').addEventListener('click', () => {  
+    document.getElementById('modal-receta').style.display = 'none';  
+});  
+
+// Evento de Calorías  
+document.getElementById('btn-agregar-calorias').addEventListener('click', () => {  
+    const caloriasUsuario = document.getElementById('input-calorias-usuario').value;  
+    mostrarCalculadoraCalorias(caloriasUsuario);  
+});  
+
+function mostrarCalculadoraCalorias(caloriasBase) {  
+    // Validar entrada  
+    if (!caloriasBase || isNaN(caloriasBase)) {  
+        alert('Por favor, ingrese un valor válido de calorías');  
+        return;  
+    }  
+
+    // Convertir a número  
+    caloriasBase = Number(caloriasBase);  
+
+    // Rango de calorías (+/- 20%)  
+    const rangoMinimo = caloriasBase * 0.8;  
+    const rangoMaximo = caloriasBase * 1.2;  
+
+    const recetasRecomendadas = recetas.filter(receta =>   
+        receta.calorias >= rangoMinimo &&   
+        receta.calorias <= rangoMaximo  
+    );  
+
+    if (recetasRecomendadas.length === 0) {  
+        alert('No hay recetas que coincidan con tu rango calórico');  
+        return;  
+    }  
+
+    // Crear mensaje detallado  
+    const mensaje = `  
+    Recomendaciones para ${caloriasBase} calorías:  
+    
+    ${recetasRecomendadas.map(r =>   
+        `• ${r.titulo} (${r.calorias} calorías)`  
+    ).join('\n')}  
+    `;  
+
+    alert(mensaje);  
+}
+
+// Cargar recetas iniciales  
+document.addEventListener('DOMContentLoaded', () => {  
+    cargarRecetas();  
+});
+// Validaciones generales  
+function validarEntrada(input) {  
+    // Remover espacios en blanco  
+    input = input.trim();  
+
+    // Prevenir inyección de scripts  
+    const scriptRegex = /<script>|<\/script>/gi;  
+    if (scriptRegex.test(input)) {  
+        alert('Entrada inválida');  
+        return null;  
+    }  
+
+    return input;  
+}  
+
+// Eventos con validación  
+document.getElementById('input-busqueda').addEventListener('input', (e) => {  
+    const terminoValidado = validarEntrada(e.target.value);  
+    if (terminoValidado !== null) {  
+        cargarRecetas(terminoValidado);  
+    }  
+});  
+
+document.getElementById('input-calorias-usuario').addEventListener('input', (e) => {  
+    // Solo permitir números  
+    e.target.value = e.target.value.replace(/[^0-9]/g, '');  
+});  
+
+// Validación de formulario de calorías  
+document.getElementById('btn-agregar-calorias').addEventListener('click', () => {  
+    const caloriasInput = document.getElementById('input-calorias-usuario');  
+    const calorias = Number(caloriasInput.value);  
+
+    if (calorias <= 0 || calorias > 5000) {  
+        alert('Por favor, ingrese un valor de calorías entre 1 y 5000');  
+        caloriasInput.value = '';  
+        return;  
+    }  
+
+    mostrarCalculadoraCalorias(calorias);  
+});
+function mostrarDetallesReceta(receta) {  
+    const modal = document.getElementById('modal-receta');  
+    const contenido = document.getElementById('contenido-modal');  
+
+    contenido.innerHTML = `  
+        <h2>${receta.titulo}</h2>  
+        <img src="${receta.imagen}" alt="${receta.titulo}">  
+        <h3>Ingredientes:</h3>  
+        <ul>  
+            ${receta.ingredientes.map(ing => `<li>${ing}</li>`).join('')}  
+        </ul>  
+        <h3>Preparación:</h3>  
+        <ol>  
+            ${receta.preparacion.map(step => `<li>${step}</li>`).join('')}  
+        </ol>  
+    `;  
+
+    modal.style.display = 'block'; // Show the modal  
+}
+  
+//CODIGO STYLES.CSS
+:root {  
+    --color-primario: #2c3e50;  
+    --color-secundario: #3498db;  
+    --color-fondo: #ecf0f1;  
+}  
+
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+body {  
+    font-family: 'Arial', sans-serif;  
+    background-color: var(--color-fondo);  
+}  
+
+.menu-superior {  
+    display: flex;  
+    justify-content: space-around;  
+    background-color: var(--color-primario);  
+    height: 44px;  
+    align-items: center;  
+}  
+
+.menu-superior button {  
+    background: none;  
+    border: none;  
+    color: white;  
+    height: 100%;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}  
+
+.menu-superior button:hover {  
+    background-color: rgba(255,255,255,0.2);  
+}  
+
+.titulo-principal {  
+    text-align: center;  
+    padding: 20px;  
+    background-color: var(--color-secundario);  
+    color: white;  
+}  
+
+.seccion-busqueda {  
+    display: flex;  
+    justify-content: center;  
+    margin: 20px 0;  
+}  
+
+.grid-recetas {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+    gap: 20px;  
+    padding: 20px;  
+}  
+
+.tarjeta-receta {  
+    background: white; 
+    border-radius: 10px;  
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);  
+    overflow: hidden;  
+}  
+
+.tarjeta-receta img {  
+    width: 100%;  
+    height: 250px;  
+    object-fit: cover;  
+}  
+
+.modal {  
+    display: none;  
+    position: fixed;  
+    z-index: 1000;  
+    left: 0;  
+    top: 0;  
+    width: 100%;  
+    height: 100%;  
+    background-color: rgba(0,0,0,0.5);  
+}  
+
+.modal-contenido {  
+    background-color: white;  
+    margin: 10% auto;  
+    padding: 20px;  
+    border-radius: 10px;  
+    width: 80%;  
+    max-width: 600px;  
+}  
+
+footer {  
+    text-align: center;  
+    padding: 20px;  
+    background-color: var(--color-primario);  
+    color: white;  
+    font-weight: bold;  
+}
+/* Responsive Design */  
+@media screen and (max-width: 768px) {  
+    .menu-superior {  
+        flex-direction: column;  
+        height: auto;  
+        padding: 10px 0;  
+    }  
+
+    .menu-superior button {  
+        width: 100%;  
+        padding: 10px 0;  
+    }  
+
+    .grid-recetas {  
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));  
+        gap: 10px;  
+    }  
+
+    .modal-contenido {  
+        width: 95%;  
+        margin: 5% auto;  
+    }  
+
+    .seccion-busqueda {  
+        flex-direction: column;  
+        align-items: center;  
+    }  
+
+    .seccion-busqueda input,   
+    .seccion-busqueda button {  
+        width: 90%;  
+        margin: 5px 0;  
+    }  
+}
+//CODIGO INDEX
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>App de Recetas Saludables</title>  
+    <link rel="stylesheet" href="styles.css">  
+</head>  
+<body>  
+    <!-- Menú Superior -->  
+    <nav class="menu-superior">  
+        <button id="btn-inicio">Inicio</button>  
+        <button id="btn-buscar">Buscar</button>  
+        <button id="btn-calorias">Calorías</button>  
+        <button id="btn-perfil">Perfil</button>  
+    </nav>  
+
+    <!-- Título Principal -->  
+    <header class="titulo-principal">  
+        <h1>FIT RECETAS</h1>  
+    </header>  
+
+    <!-- Sección de Búsqueda -->  
+    <div class="seccion-busqueda">  
+        <input   
+            type="text"   
+            id="input-busqueda"   
+            placeholder="Buscar receta..."  
+        >  
+        <button id="boton-buscar">🔍</button>  
+    </div>  
+
+    <!-- Sección de Calorías -->  
+    <div id="seccion-calorias" class="modal-calorias">  
+        <div class="contenido-calorias">  
+            <h2>Control de Calorías</h2>  
+            <input   
+                type="number"   
+                id="input-calorias-usuario"   
+                placeholder="Ingresa tus calorías actuales"  
+            >  
+            <button id="btn-agregar-calorias">Agregar Calorías</button>  
+        </div>  
+    </div>  
+
+    <!-- Contenedor de Recetas -->  
+    <div id="contenedor-recetas" class="grid-recetas">  
+        <!-- Aquí se cargarán dinámicamente las recetas -->  
+    </div>  
+
+    <!-- Modal de Detalles de Receta -->  
+    <div id="modal-receta" class="modal">  
+        <div class="modal-contenido">  
+            <span class="cerrar">&times;</span>  
+            <div id="contenido-modal">  
+                <!-- Detalles de receta se cargarán aquí -->  
+            </div>  
+        </div>  
+    </div>  
+
+    <footer>  
+        <p>PROYECTO FINAL</p>  
+    </footer>  
+
+    <script src="script.js"></script>  
+</body>  
+</html>
+<h2>Ensalada de Quinoa</h2>  
+<img src="ruta/a/imagen.jpg" alt="Ensalada de Quinoa">  
+<h3>Ingredientes:</h3>  
+<ul>  
+    <li>Quinoa</li>  
+    <li>Tomate</li>  
+    <li>Pepino</li>  
+    <li>Aceite de oliva</li>  
+    <li>Sal</li>  
+</ul>  
+<h3>Preparación:</h3>  
+<ol>  
+    <li>Cocinar la quinoa según las instrucciones del paquete.</li>  
+    <li>Mezclar todos los ingredientes en un bol.</li>  
+    <li>Servir fría.</li>  
+</ol>
